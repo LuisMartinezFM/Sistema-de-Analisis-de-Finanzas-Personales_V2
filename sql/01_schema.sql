@@ -1,3 +1,7 @@
+-- Tabla central del sistema financiero
+-- Registra todos los movimientos con montos positivos.
+-- El impacto financiero se determina por el tipo de movimiento.
+
 CREATE TABLE movimientos_liquidez (
     id SERIAL PRIMARY KEY,
     fecha DATE NOT NULL,
