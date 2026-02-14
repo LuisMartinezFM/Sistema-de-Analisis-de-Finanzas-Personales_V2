@@ -26,3 +26,12 @@ El sistema se compone de:
 - Módulo 6 – KPIs y visualización
 - Módulo 7 – Iteración y mantenimiento
 - Módulo 8 – UI/UX final
+
+## Principios del sistema
+
+- Los montos siempre se registran como positivos.
+- El impacto financiero depende del tipo de movimiento.
+- Separación estricta entre liquidez, deuda y patrimonio.
+- Validación cruzada entre SQL y Power BI.
+- Ninguna visual corrige errores de modelo.
+
