@@ -33,7 +33,6 @@ COALESCE(
     0
 )
 
-
 ## Liquidez Final
 Liquidez Final = 
 COALESCE(
