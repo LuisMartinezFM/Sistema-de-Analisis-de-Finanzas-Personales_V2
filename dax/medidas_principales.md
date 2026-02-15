@@ -41,9 +41,17 @@ COALESCE(
 )
 
 
-Presupuesto Usado
+## Presupuesto Usado
+Presupuesto_Usado_v2 = 
+COALESCE(
+    CALCULATE(
+        SUM ( 'finanzas fact_movimientos_liquidez'[monto] ),
+        'finanzas fact_movimientos_liquidez'[tipo_movimiento] = "EGRESO",
+        'finanzas cat_conceptos_financieros'[presupuestable] = "S"
+    ),
+    0
+)
 
-Deuda Activa
 
 ## Estado de los prestamos
 Estado_prestamo = 
