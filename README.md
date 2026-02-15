@@ -35,3 +35,16 @@ El sistema se compone de:
 - Validación cruzada entre SQL y Power BI.
 - Ninguna visual corrige errores de modelo.
 
+## Arquitectura general
+
+Reglas financieras  
+        ↓  
+Modelo relacional (PostgreSQL)  
+        ↓  
+Modelo semántico (Power BI)  
+        ↓  
+KPIs  
+        ↓  
+Dashboards (UX/UI)
+
+
