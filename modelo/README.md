@@ -7,5 +7,5 @@ El sistema se basa en un modelo relacional normalizado que garantiza:
 - Integridad referencial
 - Consistencia analítica
 
-![Diagrama relacional](modelo/diagrama_relacional_Finanzas.png)
+![Diagrama relacional](/modelo/diagrama_relacional_Finanzas.png)
 
