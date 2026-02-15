@@ -20,7 +20,7 @@ COALESCE(
     0
 )
 
-## Liquidez Total
+## Liquidez disponible del mes
 Liquidez_Total = [Liquidez_Inicial] + [Sueldo_mensual] + [Ingresos_Extras]
 
 ## Monto Usado
@@ -33,7 +33,7 @@ COALESCE(
     0
 )
 
-## Liquidez Final
+## Liquidez a final de mes
 Liquidez Final = 
 COALESCE(
     [Liquidez_Total] - [Monto_Usado],
@@ -44,3 +44,13 @@ COALESCE(
 Presupuesto Usado
 
 Deuda Activa
+
+## Estado de los prestamos
+Estado_prestamo = 
+SWITCH (
+    TRUE(),
+    'finanzas fact_prestamos'[Monto_restante] > 0, "ACTIVO",
+    'finanzas fact_prestamos'[Monto_restante] = 0, "INACTIVO",
+    'finanzas fact_prestamos'[Monto_restante] < 0, "REVISION"
+)
+
