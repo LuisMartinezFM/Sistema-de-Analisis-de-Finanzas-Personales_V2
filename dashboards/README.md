@@ -8,7 +8,7 @@ Este dashboard es recursivo, la liquidez final de un mes es la liquidez inicial 
 
 Este dashboard evalúa el nivel de exposición de la línea de crédito en relación con la liquidez disponible.
 La línea usada se analiza tanto como porcentaje del límite total como contra la liquidez real del mes, permitiendo medir riesgo operativo antes del cierre.
-![Tarjetas](dashboards/tarjetas.png)
+![Tarjetas](/dashboards/tarjetas.png)
 
 ### Presupuestos
 Descripción breve.
