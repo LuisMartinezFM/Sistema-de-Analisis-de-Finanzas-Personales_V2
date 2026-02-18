@@ -2,6 +2,12 @@
 
 ### Liquidez vs Uso
 Este dashboard es recursivo, la liquidez final de un mes es la liquidez inicial del proximo mes, la liquidez total es la suma, de esta mas el saldo mensual, y es un indicar de lqiuidez neta, el objetivo es que esta se igual o mayor al sueldo del mes pasado.
+
+Métricas clave:
+- Liquidez Inicial
+- Saldo Mensual
+- Liquidez Total = Liquidez Inicial + Saldo Mensual
+- Sueldo Mes Anterior
 ### ![Liquidez vs Uso](/dashboards/Liquidez_vs_Uso.png)
 
 ## Tarjetas de crédito
@@ -32,5 +38,6 @@ Reglas aplicadas:
 - Las medidas DAX fueron validadas contra consultas SQL en PostgreSQL.
 
 El análisis se realiza bajo contexto de filtro temporal y por tarjeta, permitiendo evaluar exposición financiera dentro del período contable activo
+## ![Liquidez vs Uso](/dashboards/MSI.png)
 
 
