@@ -38,6 +38,6 @@ Reglas aplicadas:
 - Las medidas DAX fueron validadas contra consultas SQL en PostgreSQL.
 
 El análisis se realiza bajo contexto de filtro temporal y por tarjeta, permitiendo evaluar exposición financiera dentro del período contable activo
-## ![Liquidez vs Uso](/dashboards/MSI.png)
+## ![Liquidez vs Uso](/dashboards/msi.png)
 
 
