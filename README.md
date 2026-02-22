@@ -81,7 +81,7 @@ Seguimiento de compras a meses sin intereses activas: mensualidad, saldo pagado,
 
 ### Presupuestos
 El dashboard más complejo del sistema. Implementa un modelo recursivo donde el saldo no usado de un mes se acumula al siguiente.
-![MSI](/dashboards/msi.png)
+![Presupuestos](/dashboards/Presupuestos.png)
 
 ```
 Presupuesto_Real      = Liquidez_Total × (porcentaje / 100)
@@ -95,7 +95,7 @@ Saldo_Anterior(N)     = Saldo_del_Presupuesto(N-1)
 
 ### Ahorros
 Progreso de cada fondo de ahorro: abonos, retiros y avance hacia la meta.
-![MSI](/dashboards/msi.png)
+![Ahorros](/dashboards/Ahorros.png)
 
 ```
 Ahorro_Acumulado = Monto_Abonado - Monto_Retirado
@@ -106,7 +106,7 @@ Ahorro_Restante  = Meta_del_Fondo - Ahorro_Acumulado
 
 ### Préstamos
 Estado de préstamos otorgados (LEND) y recibidos (BORROW): monto, fecha, contraparte y estado activo/inactivo.
-![MSI](/dashboards/msi.png)
+![Prestamos](/dashboards/Prestamos.png)
 
 ---
 
