@@ -62,11 +62,9 @@ Liquidez_Final(N) = Liquidez_Inicial(N+1)
 Evalúa el nivel de exposición de cada tarjeta en relación con la liquidez disponible.
 ![MSI](/dashboards/msi.png)
 
-```
 Linea_Disponible      = Linea_Credito_Total - Linea_Usada
 % Credito_Usado       = Linea_Usada / Linea_Credito_Total
 % Tarjeta_vs_Liquidez = Linea_Usada / Liquidez_Total
-```
 
 ![Tarjetas de Crédito](/dashboards/tarjetas.png)
 
@@ -78,18 +76,20 @@ Seguimiento de compras a meses sin intereses activas: mensualidad, saldo pagado,
 ![MSI](/dashboards/msi.png)
 
 ---
+### Lista de Presupuestos
+Tabla de referencia visual que muestra qué categorías tienen presupuesto asignado en el mes seleccionado. Sirve como guía antes de revisar el dashboard de Presupuestos.
+![Lista](/dashboards/Lista.png)
 
 ### Presupuestos
 El dashboard más complejo del sistema. Implementa un modelo recursivo donde el saldo no usado de un mes se acumula al siguiente.
+
 ![Presupuestos](/dashboards/Presupuestos.png)
 
-```
 Presupuesto_Real      = Liquidez_Total × (porcentaje / 100)
 Presupuesto_Ideal     = Sueldo_Mensual × (porcentaje / 100)
 Acumulado_Historico   = Presupuesto_Real + Saldo_Anterior
 Saldo_del_Presupuesto = Acumulado_Historico - Presupuesto_Usado
 Saldo_Anterior(N)     = Saldo_del_Presupuesto(N-1)
-```
 
 ---
 
