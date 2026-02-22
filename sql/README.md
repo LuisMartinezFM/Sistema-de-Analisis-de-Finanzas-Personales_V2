@@ -11,7 +11,7 @@ Definición de tablas y entidades principales.
 Claves primarias, foráneas e integridad referencial.
 
 03_sample_data.sql  
-Datos de prueba para simulación y validación.
+Datos de prueba generados a partir de una narrativa financiera ficticia — se diseñó un perfil de personaje falso e insertó via SQL para validar el modelo sin exponer información personal real.
 
 04_validation_queries.sql  
 Consultas de verificación para contrastar resultados con Power BI.
