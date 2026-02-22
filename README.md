@@ -60,6 +60,7 @@ Liquidez_Final(N) = Liquidez_Inicial(N+1)
 
 ### Tarjetas de Crédito
 Evalúa el nivel de exposición de cada tarjeta en relación con la liquidez disponible.
+![MSI](/dashboards/msi.png)
 
 ```
 Linea_Disponible      = Linea_Credito_Total - Linea_Usada
@@ -80,6 +81,7 @@ Seguimiento de compras a meses sin intereses activas: mensualidad, saldo pagado,
 
 ### Presupuestos
 El dashboard más complejo del sistema. Implementa un modelo recursivo donde el saldo no usado de un mes se acumula al siguiente.
+![MSI](/dashboards/msi.png)
 
 ```
 Presupuesto_Real      = Liquidez_Total × (porcentaje / 100)
@@ -93,6 +95,7 @@ Saldo_Anterior(N)     = Saldo_del_Presupuesto(N-1)
 
 ### Ahorros
 Progreso de cada fondo de ahorro: abonos, retiros y avance hacia la meta.
+![MSI](/dashboards/msi.png)
 
 ```
 Ahorro_Acumulado = Monto_Abonado - Monto_Retirado
@@ -103,10 +106,12 @@ Ahorro_Restante  = Meta_del_Fondo - Ahorro_Acumulado
 
 ### Préstamos
 Estado de préstamos otorgados (LEND) y recibidos (BORROW): monto, fecha, contraparte y estado activo/inactivo.
+![MSI](/dashboards/msi.png)
 
 ---
 
 ## Estructura del repositorio
+
 
 ```
 📁 sql/          — esquema de base de datos y queries de validación
