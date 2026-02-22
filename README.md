@@ -95,7 +95,7 @@ Saldo_Anterior(N)     = Saldo_del_Presupuesto(N-1)
 
 ### Ahorros
 Progreso de cada fondo de ahorro: abonos, retiros y avance hacia la meta.
-![Ahorros](/dashboards/Ahorro.png)
+![Ahorros](/dashboards/Ahorros.png)
 
 ```
 Ahorro_Acumulado = Monto_Abonado - Monto_Retirado
