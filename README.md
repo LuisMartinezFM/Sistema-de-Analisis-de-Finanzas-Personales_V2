@@ -2,6 +2,8 @@
 
 Sistema end-to-end de finanzas personales construido sobre reglas explícitas, modelado relacional en PostgreSQL y análisis en Power BI. Cubre liquidez, tarjetas de crédito, presupuestos, ahorros y préstamos.
 
+> **Nota:** los datos del sistema son ficticios. Se diseñó una narrativa financiera de un personaje ficticio e insertó via SQL para validar el modelo sin exponer información personal real.
+
 ---
 
 ## Stack
@@ -60,14 +62,13 @@ Liquidez_Final(N) = Liquidez_Inicial(N+1)
 
 ### Tarjetas de Crédito
 Evalúa el nivel de exposición de cada tarjeta en relación con la liquidez disponible.
-![MSI](/dashboards/msi.png)
 
 ```
 Linea_Disponible      = Linea_Credito_Total - Linea_Usada
 % Credito_Usado       = Linea_Usada / Linea_Credito_Total
 % Tarjeta_vs_Liquidez = Linea_Usada / Liquidez_Total
-Ahorro_Restante  = Meta_del_Fondo - Ahorro_Acumulado
 ```
+
 ![Tarjetas de Crédito](/dashboards/tarjetas.png)
 
 ---
@@ -78,27 +79,22 @@ Seguimiento de compras a meses sin intereses activas: mensualidad, saldo pagado,
 ![MSI](/dashboards/msi.png)
 
 ---
-### Lista de Presupuestos
-Tabla de referencia visual que muestra qué categorías tienen presupuesto asignado en el mes seleccionado. Sirve como guía antes de revisar el dashboard de Presupuestos.
-![Lista](/dashboards/Lista.png)
 
 ### Presupuestos
 El dashboard más complejo del sistema. Implementa un modelo recursivo donde el saldo no usado de un mes se acumula al siguiente.
 
-![Presupuestos](/dashboards/Presupuestos.png)
 ```
 Presupuesto_Real      = Liquidez_Total × (porcentaje / 100)
 Presupuesto_Ideal     = Sueldo_Mensual × (porcentaje / 100)
 Acumulado_Historico   = Presupuesto_Real + Saldo_Anterior
 Saldo_del_Presupuesto = Acumulado_Historico - Presupuesto_Usado
 Saldo_Anterior(N)     = Saldo_del_Presupuesto(N-1)
-Ahorro_Restante  = Meta_del_Fondo - Ahorro_Acumulado
 ```
+
 ---
 
 ### Ahorros
 Progreso de cada fondo de ahorro: abonos, retiros y avance hacia la meta.
-![Ahorros](/dashboards/Ahorros.png)
 
 ```
 Ahorro_Acumulado = Monto_Abonado - Monto_Retirado
@@ -107,14 +103,17 @@ Ahorro_Restante  = Meta_del_Fondo - Ahorro_Acumulado
 
 ---
 
+### Lista de Presupuestos
+Tabla de referencia visual que muestra qué categorías tienen presupuesto asignado en el mes seleccionado. Sirve como guía antes de revisar el dashboard de Presupuestos.
+
+---
+
 ### Préstamos
 Estado de préstamos otorgados (LEND) y recibidos (BORROW): monto, fecha, contraparte y estado activo/inactivo.
-![Prestamos](/dashboards/Prestamos.png)
 
 ---
 
 ## Estructura del repositorio
-
 
 ```
 📁 sql/          — esquema de base de datos y queries de validación
