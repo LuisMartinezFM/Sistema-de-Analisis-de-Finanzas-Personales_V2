@@ -90,7 +90,7 @@ Acumulado_Historico   = Presupuesto_Real + Saldo_Anterior
 Saldo_del_Presupuesto = Acumulado_Historico - Presupuesto_Usado
 Saldo_Anterior(N)     = Saldo_del_Presupuesto(N-1)
 ```
-
+![Presupuestos](/dashboards/Presupuestos.png)
 ---
 
 ### Ahorros
@@ -100,17 +100,17 @@ Progreso de cada fondo de ahorro: abonos, retiros y avance hacia la meta.
 Ahorro_Acumulado = Monto_Abonado - Monto_Retirado
 Ahorro_Restante  = Meta_del_Fondo - Ahorro_Acumulado
 ```
-
+![Ahorros](/dashboards/Ahorros.png)
 ---
 
 ### Lista de Presupuestos
 Tabla de referencia visual que muestra qué categorías tienen presupuesto asignado en el mes seleccionado. Sirve como guía antes de revisar el dashboard de Presupuestos.
-
+![Lista](/dashboards/Lista.png)
 ---
 
 ### Préstamos
 Estado de préstamos otorgados (LEND) y recibidos (BORROW): monto, fecha, contraparte y estado activo/inactivo.
-
+![Prestamos](/dashboards/Prestamos.png)
 ---
 
 ## Estructura del repositorio
